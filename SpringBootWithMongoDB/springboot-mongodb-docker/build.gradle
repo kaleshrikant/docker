@@ -13,6 +13,16 @@ java {
 	}
 }
 
+jar {
+    archiveFileName = "springboot-mongo-docker"
+
+    manifest {
+        attributes(
+                'Main-Class': 'com.kaleshrikant.SpringbootMongodbDockerApplication.java'
+        )
+    }
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
