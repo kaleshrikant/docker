@@ -1,0 +1,16 @@
+version: "3"
+services:
+  svc-mongodb:
+    image: mongo:latest # mongo image name
+    container_name: "mongocontainer" # mongo container name
+    ports:
+      - 27017:27017
+  svc-springboot-mongodb:
+    image: spring-boot-mongodb:1.0
+    container_name: springboot-mongodb-container
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongocontainer:27017/your_database_name
+    depends_on:
+      - svc-mongodb
