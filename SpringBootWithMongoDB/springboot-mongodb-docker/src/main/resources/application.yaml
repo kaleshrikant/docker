@@ -1,3 +1,6 @@
 spring:
-  application:
-    name: springboot-mongodb-docker
+  data:
+    mongodb:
+      database: Book
+      host: mongocontainer
+      port: 27017
