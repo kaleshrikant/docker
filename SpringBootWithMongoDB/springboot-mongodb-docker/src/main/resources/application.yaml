@@ -4,3 +4,9 @@ spring:
       database: Book
       host: mongocontainer
       port: 27017
+  main:
+    allow-bean-definition-overriding: true
+
+  app:
+    mongo:
+      collation-locale: en
