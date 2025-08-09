@@ -77,6 +77,6 @@ ii. Specify and Apply
 iii. Run application in Debug mode.
 
 See :
-1.
-2.
-3.
+1. https://github.com/kaleshrikant/docker/blob/main/docker-remote-debug/src/main/resources/static/debug-sendAnnouncement.png
+2. https://github.com/kaleshrikant/docker/blob/main/docker-remote-debug/src/main/resources/static/debug.png
+3. https://github.com/kaleshrikant/docker/blob/main/docker-remote-debug/src/main/resources/static/intellij-adding-remote.png
