@@ -5,13 +5,19 @@ plugins {
 }
 
 group = 'com.kaleshrikant'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
+
+bootJar {
+    archiveFileName = 'docker-remote-debug.jar'
+    mainClass = 'com.kaleshrikant.DockerRemoteDebugApplication'
+}
+
 
 configurations {
 	compileOnly {
