@@ -2,16 +2,42 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.5.4'
 	id 'io.spring.dependency-management' version '1.1.7'
+    id 'com.google.cloud.tools.jib' version '3.4.0'
 }
 
 group = 'com.kaleshrikant'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
+
+bootJar {
+    archiveFileName = 'spring-boot-docker-google-jib-app.jar'
+    mainClass = 'com.kaleshrikant.SpringBootDockerGoogleJibApplication'
+}
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(24)
 	}
 }
+
+jib {
+    from {
+        image = 'eclipse-temurin:24-jdk'
+    }
+    to {
+        image = 'beingshrikant/spring-boot-docker-google-jib'
+        auth {
+            username = 'JIB_TO_AUTH_USERNAME'
+            password = 'JIB_TO_AUTH_PASSWORD'
+        }
+    }
+    container {
+        ports = ['8080']
+        environment = [
+                'SPRING_PROFILES_ACTIVE': 'prod'
+        ]
+    }
+}
+
 
 repositories {
 	mavenCentral()
