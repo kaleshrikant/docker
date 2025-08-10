@@ -26,8 +26,8 @@ jib {
     to {
         image = 'beingshrikant/spring-boot-docker-google-jib'
         auth {
-            username = 'JIB_TO_AUTH_USERNAME'
-            password = 'JIB_TO_AUTH_PASSWORD'
+            username = 'jib.to.auth.username'
+            password = 'jib.to.auth.password'
         }
     }
     container {
