@@ -49,6 +49,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+        <finalName>spring-soot-docker-maven-plugin</finalName>
 	</build>
 
 </project>
