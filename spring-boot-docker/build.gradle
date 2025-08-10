@@ -5,7 +5,12 @@ plugins {
 }
 
 group = 'com.kaleshrikant'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
+
+bootJar {
+    archiveFileName = 'spring-boot-docker.jar'
+    mainClass = 'com.kaleshrikant.SpringBootDockerApplication'
+}
 
 java {
 	toolchain {
